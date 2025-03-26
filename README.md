@@ -10,7 +10,7 @@ Architecture
 Role:
 My role in this project as an ETL developer where I create the external tables in synapse analytics, initially my data is lying in ADLS Gen 2. Using Dedicated synapse pool, I need to clean the data on the fly and corrected data needs to be stored in synapse data warehouse.
 To maintain this architecture I have created a dedicated pool with staging dB which contained two tables. Staging DB will get the raw data from ADLS and the curated data into another data which is available for other teams. From this curated data I will be responsible to the other teams if there is any issue with accessing the data from Dedicated pool.
-In this project we are using limited data, so My company encourages to use Synapse as a DW even though it is a bit costlier compared to the ADLS Gen 2.
+In this project we are using limited data. We are storing the data into synapse DW for its fast response, as the client teams like data analysts and Power Bi teams doesn't want to  wait for the delay in data response.
 
 
 STEP 1: Creating the Dedicated pools in synapse analytics 
